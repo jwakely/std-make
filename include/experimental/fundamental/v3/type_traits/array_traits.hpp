@@ -12,11 +12,9 @@
 #ifndef JASEL_STD_ARRAY_TRAITS_HPP
 #define JASEL_STD_ARRAY_TRAITS_HPP
 
-// fixme: adapt as soon as this trait is implemented
-#if __cplusplus <= 202303L
-
 #include <type_traits>
 
+#ifndef __cpp_lib_bounded_array_traits
 namespace std
 {
 

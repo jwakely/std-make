@@ -15,6 +15,7 @@
 
 #include <type_traits> //remove_cv_t, remove_reference_t
 
+#ifndef __cpp_lib_remove_cvref
 namespace std
 {
 template <class T>
@@ -25,6 +26,7 @@ struct remove_cvref : remove_cv<typename remove_reference<T>::type>
 template <class T>
 using remove_cvref_t = typename remove_cvref<T>::type;
 } // namespace std
+#endif
 
 #endif
 #endif // header
